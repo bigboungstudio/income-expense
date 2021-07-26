@@ -21,7 +21,7 @@
       <span>ยอดรายรับ : </span>
       <span>{{ money.income }}</span>
       <br />
-      <span>ยอดราบจ่าย : </span>
+      <span>ยอดรายจ่าย : </span>
       <span>{{ money.expense }}</span>
       <br />
       <span>ยอดเงินคงเหลือ : </span>
