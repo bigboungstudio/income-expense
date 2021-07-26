@@ -1,12 +1,20 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
+import VCalendar from "v-calendar";
+import "./assets/mycss.css";
+import VueAxios from "vue-axios";
+import axios from "axios";
 
-Vue.config.productionTip = false
+Vue.use(VueAxios, axios);
+
+Vue.use(VCalendar, {});
+
+Vue.config.productionTip = false;
 
 new Vue({
   router,
   store,
-  render: h => h(App)
-}).$mount('#app')
+  render: (h) => h(App),
+}).$mount("#app");

@@ -1,10 +1,6 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div id="app" class="allbackground">
+    <router-view />
   </div>
 </template>
 
@@ -28,5 +24,10 @@
       color: #42b983;
     }
   }
+}
+.allbackground {
+  height: 100vh;
+  background-color: #e6e6fa;
+  margin: 0;
 }
 </style>
