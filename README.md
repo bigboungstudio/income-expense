@@ -3,7 +3,7 @@
 ## Project setup
 ```
 npm install
-npm install --save v-calendar
+
 ```
 
 ### Compiles and hot-reloads for development

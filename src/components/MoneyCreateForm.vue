@@ -69,15 +69,27 @@ export default {
       };
     },
     addMoney() {
-      let payload = {
-        date: this.form.date,
-        detail: this.form.detail,
-        money: this.form.money,
-        type: this.form.type,
-      };
-      console.log(payload);
-      MoneyStore.dispatch("addMoney", payload);
-      this.clearForm;
+      if (form.detail == "") {
+        let payload = {
+          date: this.form.date,
+          detail: "ไม่ระบุ",
+          money: this.form.money,
+          type: this.form.type,
+        };
+        console.log(payload);
+        MoneyStore.dispatch("addMoney", payload);
+        this.clearForm;
+      } else {
+        let payload = {
+          date: this.form.date,
+          detail: this.form.detail,
+          money: this.form.money,
+          type: this.form.type,
+        };
+        console.log(payload);
+        MoneyStore.dispatch("addMoney", payload);
+        this.clearForm;
+      }
     },
   },
 };
