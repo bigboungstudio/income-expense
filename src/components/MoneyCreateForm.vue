@@ -69,7 +69,14 @@ export default {
       };
     },
     addMoney() {
-      if (form.detail == "") {
+      if (this.form.date == "") {
+        this.form.date = "ไม่ระบุ";
+      }
+      if (
+        this.form.money !== "" &&
+        this.form.type !== "" &&
+        this.form.detail == ""
+      ) {
         let payload = {
           date: this.form.date,
           detail: "ไม่ระบุ",
@@ -79,7 +86,11 @@ export default {
         console.log(payload);
         MoneyStore.dispatch("addMoney", payload);
         this.clearForm;
-      } else {
+      } else if (
+        this.form.money !== "" &&
+        this.form.type !== "" &&
+        this.form.detail !== ""
+      ) {
         let payload = {
           date: this.form.date,
           detail: this.form.detail,
